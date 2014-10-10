@@ -1,4 +1,4 @@
-### Una introducción a R
+# Una introducción a R
 
 ## Herramientas para el análisis de datos de biodiversidad
 
