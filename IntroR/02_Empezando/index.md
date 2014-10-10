@@ -19,33 +19,101 @@ type: sub-section
 1.1 R como una calculadora
 ========================================================
 
-```{r}
+
+```r
 1 + 1
+```
+
+```
+[1] 2
+```
+
+```r
 10 - 5
+```
+
+```
+[1] 5
+```
+
+```r
 10 / 2
 ```
+
+```
+[1] 5
+```
 ***
-```{r}
+
+```r
 2^3  # potenciación
+```
+
+```
+[1] 8
+```
+
+```r
 2 * 5  # sin o con espacios
+```
+
+```
+[1] 10
+```
+
+```r
 2*5
+```
+
+```
+[1] 10
 ```
 <small>Espacios pueden facilitar la lectura</small>
 
 1.2 R como calculadora
 ========================================================
 
-```{r}
+
+```r
 10 %% 5 # módulo (resto de la división entera)
+```
+
+```
+[1] 0
+```
+
+```r
 10 %% 6
+```
+
+```
+[1] 4
 ```
 1.3 R como calculadora
 ========================================================
-```{r}
-10 %/% 5 # división entera (resultado de la división sin fracción)
-10 %/% 6
 
+```r
+10 %/% 5 # división entera (resultado de la división sin fracción)
+```
+
+```
+[1] 2
+```
+
+```r
+10 %/% 6
+```
+
+```
+[1] 1
+```
+
+```r
 18 %% 12 # p. ej convertir de 24h a 12h
+```
+
+```
+[1] 6
 ```
 
 1.4 R como calculadora
@@ -71,10 +139,29 @@ Ver
 1.5 R como calculadora
 ===============================
 
-```{r}
+
+```r
 10 + 10 / 2 - 1
+```
+
+```
+[1] 14
+```
+
+```r
 (10 + 10) /2 - 1
+```
+
+```
+[1] 9
+```
+
+```r
 8 - 4 * 4 + 2 
+```
+
+```
+[1] -6
 ```
 
 En RStudio puedes seleccionar una parte del código en el script y ejecutarlo con ctrl + enter
@@ -83,9 +170,21 @@ En RStudio puedes seleccionar una parte del código en el script y ejecutarlo co
 ===============================
 
 Si no te acuerdas del orden, o tienes dudas, usa parentesis....
-```{r}
+
+```r
 10 + (10 / 2) - 1
+```
+
+```
+[1] 14
+```
+
+```r
 10 + 10 / 2 - 1
+```
+
+```
+[1] 14
 ```
 
 1.7 R como calculadora
@@ -106,13 +205,15 @@ type: sub-section
 
 ### Colección ordenada de datos  
 <br>
-```{r, echo=FALSE}
-round(runif(8),2)
+
+```
+[1] 0.80 0.79 0.91 0.64 0.79 0.28 0.21 0.60
 ```
 Por ejemplo, filas o columnas de datos  
 <br>
-```{r, echo=FALSE}
-pi
+
+```
+[1] 3.142
 ```
 O un solo valor
 
@@ -132,15 +233,28 @@ TRUE o FALSE
 2.3 Vector con un solo dato numérico
 ========================
 
-```{r}
+
+```r
 a <- 1
 b <- 5
 x <- 100
 # Operador de asignación: <-
 ```
-```{r}
+
+```r
 a
+```
+
+```
+[1] 1
+```
+
+```r
 x
+```
+
+```
+[1] 100
 ```
 ***
 <small> **Para nombrar variables...**
@@ -156,107 +270,289 @@ x
 2.4 Operaciones con vectores 1
 ======================
 
-```{r}
+
+```r
 a + b
+```
+
+```
+[1] 6
+```
+
+```r
 (a + b) * x
+```
+
+```
+[1] 600
+```
+
+```r
 a / x
 ```
+
+```
+[1] 0.01
+```
 ***
-```{r}
+
+```r
 sum(a, b)
+```
+
+```
+[1] 6
+```
+
+```r
 sqrt(x)
+```
+
+```
+[1] 10
+```
+
+```r
 log10(x)
+```
+
+```
+[1] 2
 ```
 
 2.5 Vector de carácter
 =======================
 
-```{r}
+
+```r
 a <- "Hola"  # texto entre "comillas"
 b <- "Mundo"
 sp1 <- "Phytotoma raimondii"
 ```
-```{r}
+
+```r
 a  # el nombre del objeto no tiene comillas
+```
+
+```
+[1] "Hola"
+```
+
+```r
 sp1
+```
+
+```
+[1] "Phytotoma raimondii"
 ```
 
 2.6 Operaciones con texto
 =======================
 
-```{r}
+
+```r
 # Imprimir a la consola
 print(a)
+```
+
+```
+[1] "Hola"
+```
+
+```r
 # concatenar texto
 paste(a, b)
+```
+
+```
+[1] "Hola Mundo"
+```
+
+```r
 # con un separador
 paste(a, sp1, sep=", ")
+```
+
+```
+[1] "Hola, Phytotoma raimondii"
 ```
 
 2.7 Vectores de varios elementos
 ========================
 
-```{r}
+
+```r
 1:10 # generar una serie de números
+```
+
+```
+ [1]  1  2  3  4  5  6  7  8  9 10
+```
+
+```r
 # Usar la función c() y asignar a un vector llamado v1
 v1 <- c(1,2,3,4,5)
 v2 <- 5:10
 ```
-```{r}
+
+```r
 v2
+```
+
+```
+[1]  5  6  7  8  9 10
 ```
 <small>Vectores solo admiten un tipo de dato (númerico, carácter, lógico)</small>
 
 2.8 Operaciones con vectores 2
 ==================================
 
-```{r}
+
+```r
 v1 * 3  # cf. en excel
+```
+
+```
+[1]  3  6  9 12 15
+```
+
+```r
 v1 + v2
+```
+
+```
+[1]  6  8 10 12 14 11
+```
+
+```r
 mean(v1)
+```
+
+```
+[1] 3
+```
+
+```r
 sum(v1)/length(v1)
+```
+
+```
+[1] 3
 ```
 
 2.9 Acceder a un valor dentro de un vector con índices []
 ============================
 
-```{r}
+
+```r
 v1[3]  # acceder al 3r elemento de v1
+```
+
+```
+[1] 3
+```
+
+```r
 v1[2:4] # obtener elementos 2 a 4 de v1
+```
+
+```
+[1] 2 3 4
+```
+
+```r
 v1[-1] # obtener todos los elementos de v1 menos el primero
+```
+
+```
+[1] 2 3 4 5
 ```
 
 2.9 Series de letras
 ========================
 
-```{r}
+
+```r
 s1 <- c("a", "b", "c", "d", "e")
 s2 <- letters[1:5]  # letters es un objeto en R
 s3 <- LETTERS[1:5]  # ? Constants
 ```
-```{r}
+
+```r
 s2
+```
+
+```
+[1] "a" "b" "c" "d" "e"
+```
+
+```r
 s3
+```
+
+```
+[1] "A" "B" "C" "D" "E"
 ```
 
 
 2.10 Acceder a un elemento de un vector de caracteres
 ========================
 
-```{r}
+
+```r
 s1[1]
+```
+
+```
+[1] "a"
+```
+
+```r
 s1[4:5]
+```
+
+```
+[1] "d" "e"
+```
+
+```r
 sp1[1] # ¿Es lo que esperabas?
+```
+
+```
+[1] "Phytotoma raimondii"
+```
+
+```r
 s1[-2]
+```
+
+```
+[1] "a" "c" "d" "e"
 ```
 
 2.11 El Data frame - una "tabla" en R
 ==========================
 Podemos pensar en el data frame como una colección de vectores del mismo largo
 
-```{r}
+
+```r
 v1
+```
+
+```
+[1] 1 2 3 4 5
+```
+
+```r
 s1
+```
+
+```
+[1] "a" "b" "c" "d" "e"
+```
+
+```r
 df1 <- data.frame(Tipo = s1, Valor = v1)
 ```
 
@@ -265,9 +561,18 @@ df1 <- data.frame(Tipo = s1, Valor = v1)
   
 - un objeto básico para almacenar datos  
   
-```{r}
-df1
 
+```r
+df1
+```
+
+```
+  Tipo Valor
+1    a     1
+2    b     2
+3    c     3
+4    d     4
+5    e     5
 ```
 Más en la otra clase...  stay tuned!
 
@@ -338,7 +643,8 @@ Tenemos un ejemplo como este:
 =======================
 <small>
 Función básica para importar datos como un data frame
-```{r}
+
+```r
 df1 <- read.table("data/Sparrow_First.txt", sep="\t", header=TRUE,  dec = ".")
 ```
 - OJO con la ruta. Usa `/` o `\\`.  Rutas en tu computador dependen del plataforma (Windows, Mac, etc)
@@ -355,16 +661,37 @@ df1 <- read.table("data/Sparrow_First.txt", sep="\t", header=TRUE,  dec = ".")
 ===========================
 
 Dos funciones muy importantes!!
-```{r}
+
+```r
 head(df1)
+```
+
+```
+  Especie   Sexo Culmen Peso Observador
+1    SESP Female   15.2 22.8          2
+2    SESP Female   15.0 21.7          2
+3    SESP Female   14.9 21.1          3
+4    SESP Female   14.8 20.9          8
+5    SESP Female   14.4 19.7          3
+6    SESP   Male   14.9 24.4          1
 ```
 
 3.8 Siempre chequear lo que has importado 2
 ===========================
 
 Dos funciones muy importantes!!
-```{r}
+
+```r
 str(df1)
+```
+
+```
+'data.frame':	20 obs. of  5 variables:
+ $ Especie   : Factor w/ 2 levels "SESP","SSTS": 1 1 1 1 1 1 1 1 1 1 ...
+ $ Sexo      : Factor w/ 3 levels "Female","Male",..: 1 1 1 1 1 2 2 2 2 2 ...
+ $ Culmen    : num  15.2 15 14.9 14.8 14.4 14.9 15.8 16 15.8 14.6 ...
+ $ Peso      : num  22.8 21.7 21.1 20.9 19.7 24.4 22.8 22.6 25.2 NA ...
+ $ Observador: int  2 2 3 8 3 1 1 1 2 2 ...
 ```
 
 3.9 Importar desde el "clipboard"
@@ -374,7 +701,8 @@ Cuando copias texto o datos en el computador, lo que copias se almacena temporal
 
 Puedes copiar una tabla en excel, y leerlo desde el clipboard en R
 
-```{r, eval=FALSE}
+
+```r
 df2 <- read.table("clipboard", sep="\t", header=TRUE,  dec = ".")
 ```
 Argumento `sep` es siempre tab, `"\t"` para copiar desde excel
@@ -389,7 +717,8 @@ Otro método rápido es buscar el archivo de manera interactiva.
 
 Usar la función `file.choose()` dentro de `read.table()`
 
-```{r, eval=FALSE}
+
+```r
 df2 <- read.table(file.choose(), sep="\t", header=TRUE,  dec = ".")
 ```
 
