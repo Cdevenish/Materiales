@@ -1,0 +1,9 @@
+---
+title: Brief introduction to spatial data in R
+author: Christian Devenish
+---
+
+---
+# Why use R for spatial data?
+
+---
