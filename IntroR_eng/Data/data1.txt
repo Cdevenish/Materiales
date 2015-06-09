@@ -1,0 +1,4 @@
+### Some data for R
+
+Spp, Cty, No
+a, 
